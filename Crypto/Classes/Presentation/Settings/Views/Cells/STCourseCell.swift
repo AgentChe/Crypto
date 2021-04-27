@@ -31,7 +31,7 @@ final class STCourseCell: UITableViewCell {
 extension STCourseCell {
     func setup(course: Course) {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.semiBold(size: 17.scale))
             .lineHeight(20.scale)
             .letterSpacing(-0.24.scale)
@@ -91,7 +91,7 @@ private extension STCourseCell {
 private extension STCourseCell {
     func makeContainer() -> UIView {
         let view = UIView()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         view.layer.cornerRadius = 15.scale
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -101,7 +101,7 @@ private extension STCourseCell {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(Appearance.mainColor)
+            .textColor(UIColor(integralRed: 126, green: 216, blue: 217))
             .font(Fonts.SFProRounded.regular(size: 13.scale))
             .lineHeight(20.scale)
             .letterSpacing(-0.24.scale)

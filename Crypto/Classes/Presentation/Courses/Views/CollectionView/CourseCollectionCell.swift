@@ -29,20 +29,20 @@ extension CourseCollectionCell {
     func setup(element: CoursesCollectionElement) {
         titleLabel.attributedText = element.course.name
             .attributed(with: TextAttributes()
-                            .textColor(UIColor.black)
+                            .textColor(UIColor.white)
                             .font(Fonts.SFProRounded.bold(size: 25.scale))
                             .lineHeight(29.scale)
                             .textAlignment(.center))
 
         subTitleLabel.attributedText = element.course.subTitle
             .attributed(with: TextAttributes()
-                            .textColor(UIColor.black.withAlphaComponent(0.33))
+                            .textColor(UIColor.white.withAlphaComponent(0.33))
                             .font(Fonts.SFProRounded.semiBold(size: 17.scale))
                             .lineHeight(20.scale)
                             .textAlignment(.center))
 
         container.layer.borderWidth = element.isSelected ? 4.scale : 0
-        container.layer.borderColor = element.isSelected ? Appearance.mainColor.cgColor : UIColor.clear.cgColor
+        container.layer.borderColor = element.isSelected ? UIColor.white.cgColor : UIColor.clear.cgColor
     }
 }
 
@@ -88,7 +88,7 @@ private extension CourseCollectionCell {
         let view = UIView()
         view.layer.cornerRadius = 20.scale
         view.layer.masksToBounds = true
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

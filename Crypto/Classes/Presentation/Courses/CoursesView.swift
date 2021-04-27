@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CoursesView: UIView {
+final class CoursesView: GradientView {
     lazy var titleLabel = makeTitleLabel()
     lazy var collectionView = makeCollectionView()
     lazy var button = makeButton()
@@ -27,7 +27,12 @@ final class CoursesView: UIView {
 // MARK: Private
 private extension CoursesView {
     func initialize() {
-        backgroundColor = Appearance.backgroundColor
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
     }
 }
 
@@ -60,7 +65,7 @@ private extension CoursesView {
 private extension CoursesView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 34.scale))
             .lineHeight(40.scale)
         

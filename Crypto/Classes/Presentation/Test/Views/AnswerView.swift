@@ -40,7 +40,7 @@ extension AnswerView {
     func setAnswer(answer: String, image: URL?) {
         let attrs = TextAttributes()
             .font(Fonts.SFProRounded.regular(size: 17.scale))
-            .textColor(.black)
+            .textColor(.white)
             .lineHeight(20.scale)
         
         if let imageUrl = image {
@@ -75,12 +75,12 @@ private extension AnswerView {
         case .initial:
             layer.borderWidth = 0
             layer.borderColor = UIColor.clear.cgColor
-            backgroundColor = .white
+            backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
             iconView.image = nil
         case .selected:
             layer.borderWidth = 3.scale
-            layer.borderColor = Appearance.mainColor.cgColor
-            backgroundColor = .white
+            layer.borderColor = UIColor.white.cgColor
+            backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
             iconView.image = nil
         case .correct:
             let correctColor = UIColor(integralRed: 46, green: 190, blue: 161)

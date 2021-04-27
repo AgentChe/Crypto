@@ -26,7 +26,7 @@ final class SCTitleCell: UICollectionViewCell {
 extension SCTitleCell {
     func setup(title: String) {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.semiBold(size: 17.scale))
             .lineHeight(20.scale)
         label.attributedText = title.attributed(with: attrs)

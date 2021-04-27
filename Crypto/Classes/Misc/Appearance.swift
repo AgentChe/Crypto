@@ -8,14 +8,15 @@
 import UIKit
 
 struct Appearance {
-    static let backgroundColor = UIColor(integralRed: 252, green: 250, blue: 247)
+    static let backgroundColorTop = UIColor(integralRed: 57, green: 61, blue: 128)
+    static let backgroundColorBottom = UIColor(integralRed: 26, green: 29, blue: 79)
     
-    static let mainColor = UIColor(integralRed: 42, green: 77, blue: 93)
-    static let mainColorAlpha = UIColor(integralRed: 42, green: 77, blue: 93, alpha: 0.3)
+    static let mainColor = UIColor(integralRed: 115, green: 112, blue: 217)
+    static let mainColorAlpha = UIColor(integralRed: 115, green: 112, blue: 217, alpha: 0.3)
     
     static let takeFreeTestColor = UIColor(integralRed: 239, green: 121, blue: 55)
     
-    static let progress1Color = UIColor(integralRed: 42, green: 77, blue: 93)
-    static let progress2Color = UIColor(integralRed: 239, green: 121, blue: 55)
-    static let progress3Color = UIColor(integralRed: 245, green: 179, blue: 102)
+    static let progress1Color = UIColor(integralRed: 115, green: 112, blue: 217)
+    static let progress2Color = UIColor(integralRed: 236, green: 196, blue: 132)
+    static let progress3Color = UIColor(integralRed: 126, green: 216, blue: 217)
 }

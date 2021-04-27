@@ -43,9 +43,14 @@ private extension CourseView {
 
 // MARK: Lazy initialization
 private extension CourseView {
-    func makeContainer() -> UIView {
-        let view = UIView()
-        view.backgroundColor = Appearance.backgroundColor
+    func makeContainer() -> GradientView {
+        let view = GradientView()
+        view.gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        view.gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -53,7 +58,7 @@ private extension CourseView {
     
     func makeTabView() -> TabView {
         let view = TabView()
-        view.backgroundColor = Appearance.backgroundColor
+        view.backgroundColor = Appearance.backgroundColorBottom
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

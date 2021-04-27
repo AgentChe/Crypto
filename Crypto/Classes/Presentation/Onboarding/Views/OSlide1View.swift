@@ -68,7 +68,7 @@ private extension OSlide1View {
     
     func makeText1Label() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 30.scale))
             .lineHeight(35.scale)
         
@@ -82,7 +82,7 @@ private extension OSlide1View {
     
     func makeText2Label() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.semiBold(size: 17.scale))
             .lineHeight(22.scale)
         

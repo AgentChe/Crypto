@@ -52,7 +52,7 @@ private extension STLinkView {
 private extension STLinkView {
     func makeLabel() -> UILabel {
         let view = UILabel()
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.font = Fonts.SFProRounded.semiBold(size: 17.scale)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
@@ -70,7 +70,7 @@ private extension STLinkView {
     
     func makePlaceholder() -> UIView {
         let view = UIView()
-        view.backgroundColor = UIColor(integralRed: 196, green: 196, blue: 196)
+        view.backgroundColor = UIColor.white.withAlphaComponent(0.1)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

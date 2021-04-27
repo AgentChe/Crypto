@@ -80,7 +80,7 @@ private extension TestStatsProgressCell {
         let view = UILabel()
         view.textAlignment = .center
         view.font = Fonts.SFProRounded.bold(size: 45.scale)
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view
@@ -90,7 +90,7 @@ private extension TestStatsProgressCell {
         let view = UILabel()
         view.textAlignment = .center
         view.font = Fonts.SFProRounded.regular(size: 17.scale)
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.numberOfLines = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)

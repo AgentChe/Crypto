@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OnboardingView: UIView {
+final class OnboardingView: GradientView {
     enum Step: Int {
         case slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8, slide9, slide10, slide11, slide12, slide13, slide14, slide15
     }
@@ -77,7 +77,12 @@ extension OnboardingView: OSlideViewDelegate {
 // MARK: Private
 private extension OnboardingView {
     func initialize() {
-        backgroundColor = Appearance.backgroundColor
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
         
         contentViews
             .enumerated()

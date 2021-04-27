@@ -100,7 +100,7 @@ private extension MainRateCell {
     func makeStatsDescriptionView() -> MainStatsDescriptionView {
         let view = MainStatsDescriptionView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         contentView.addSubview(view)
         return view
     }

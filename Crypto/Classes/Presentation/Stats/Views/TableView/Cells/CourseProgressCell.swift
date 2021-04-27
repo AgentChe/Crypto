@@ -30,7 +30,7 @@ class CourseProgressCell: UITableViewCell {
 extension CourseProgressCell {
     func setup(model: CourseStatsElement) {
         let attr = TextAttributes()
-            .textColor(.black)
+            .textColor(.white)
             .font(Fonts.SFProRounded.bold(size: 17.scale))
             .lineHeight(20.29.scale)
             .textAlignment(.left)
@@ -101,7 +101,7 @@ private extension CourseProgressCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 20.scale
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         contentView.addSubview(view)
         return view
     }

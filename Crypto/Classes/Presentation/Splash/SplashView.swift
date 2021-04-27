@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SplashView: UIView {
+final class SplashView: GradientView {
     lazy var titleLabel = makeTitleLabel()
     lazy var imageView = makeImageView()
     
@@ -26,7 +26,12 @@ final class SplashView: UIView {
 // MARK: Private
 private extension SplashView {
     func initialize() {
-        backgroundColor = Appearance.backgroundColor
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
     }
 }
 
@@ -52,13 +57,13 @@ private extension SplashView {
 private extension SplashView {
     func makeTitleLabel() -> UILabel {
         let attrs1 = TextAttributes()
-            .textColor(Appearance.mainColor)
+            .textColor(UIColor(integralRed: 126, green: 216, blue: 217))
             .font(Fonts.SFProRounded.bold(size: 40.scale))
             .lineHeight(48.scale)
             .textAlignment(.center)
         
         let attrs2 = TextAttributes()
-            .textColor(UIColor(integralRed: 247, green: 208, blue: 86))
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 45.scale))
             .lineHeight(53.scale)
             .textAlignment(.center)

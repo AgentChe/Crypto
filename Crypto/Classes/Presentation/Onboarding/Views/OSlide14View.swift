@@ -103,7 +103,7 @@ private extension OSlide14View {
 private extension OSlide14View {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -121,7 +121,7 @@ private extension OSlide14View {
         view.numberOfLines = 0
         view.textAlignment = .center
         view.font = Fonts.SFProRounded.bold(size: 19.scale)
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -138,7 +138,7 @@ private extension OSlide14View {
         let view = UILabel()
         view.textAlignment = .center
         view.font = Fonts.SFProRounded.bold(size: 45.scale)
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

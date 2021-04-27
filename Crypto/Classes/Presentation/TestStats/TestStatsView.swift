@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestStatsView: UIView {
+class TestStatsView: GradientView {
     lazy var tableView = makeTableView()
     lazy var closeButton = makeCloseButton()
     lazy var titleLabel = makeTitleLabel()
@@ -28,7 +28,12 @@ class TestStatsView: UIView {
 // MARK: Private
 private extension TestStatsView {
     func initialize() {
-        backgroundColor = Appearance.backgroundColor
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
     }
 }
 
@@ -73,7 +78,7 @@ private extension TestStatsView {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setImage(UIImage(named: "Question.Close"), for: .normal)
-        view.tintColor = .black
+        view.tintColor = .white
         addSubview(view)
         return view
     }
@@ -82,7 +87,7 @@ private extension TestStatsView {
         let view = UILabel()
         view.font = Fonts.SFProRounded.regular(size: 20.scale)
         view.textAlignment = .center
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -29,7 +29,7 @@ final class OSlide4Cell: PaddingLabel {
 // MARK: Private
 private extension OSlide4Cell {
     func initialize() {
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         
         layer.masksToBounds = true
         layer.cornerRadius = 20.scale
@@ -39,12 +39,12 @@ private extension OSlide4Cell {
         leftInset = 20.scale
         rightInset = 20.scale
         
-        textColor = UIColor.black
+        textColor = UIColor.white
         font = Fonts.SFProRounded.semiBold(size: 17.scale)
     }
     
     func update() {
         layer.borderWidth = isSelected ? 2.scale : 0
-        layer.borderColor = isSelected ? Appearance.mainColor.cgColor : UIColor.white.cgColor
+        layer.borderColor = isSelected ? UIColor.white.cgColor : UIColor.clear.cgColor
     }
 }

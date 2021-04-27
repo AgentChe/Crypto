@@ -27,7 +27,7 @@ final class OSlideQuestiionButton: UIView {
 private extension OSlideQuestiionButton {
     func initialize() {
         layer.cornerRadius = 10.scale
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
     }
 }
 
@@ -63,7 +63,7 @@ private extension OSlideQuestiionButton {
         let view = UILabel()
         view.numberOfLines = 0
         view.font = Fonts.SFProRounded.semiBold(size: 17.scale)
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

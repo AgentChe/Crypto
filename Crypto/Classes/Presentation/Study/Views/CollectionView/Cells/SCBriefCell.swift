@@ -78,7 +78,7 @@ private extension SCBriefCell {
     func makeCourseNameLabel() -> UILabel {
         let view = UILabel()
         view.font = Fonts.SFProRounded.bold(size: 13.scale)
-        view.textColor = UIColor.black.withAlphaComponent(0.3)
+        view.textColor = UIColor.white.withAlphaComponent(0.3)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view
@@ -87,7 +87,7 @@ private extension SCBriefCell {
     func makeStreakLabel() -> UILabel {
         let view = UILabel()
         view.font = Fonts.SFProRounded.regular(size: 13.scale)
-        view.textColor = UIColor.black.withAlphaComponent(0.3)
+        view.textColor = UIColor.white.withAlphaComponent(0.3)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

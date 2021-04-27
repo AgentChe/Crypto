@@ -57,7 +57,7 @@ private extension OSlide5View {
 private extension OSlide5View {
     func makeSkipButton() -> UIButton {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.semiBold(size: 13.scale))
             .letterSpacing(-0.6.scale)
             .lineHeight(20.scale)
@@ -72,7 +72,7 @@ private extension OSlide5View {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)

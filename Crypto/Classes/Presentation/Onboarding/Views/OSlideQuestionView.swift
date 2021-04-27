@@ -64,7 +64,7 @@ private extension OSlideQuestionView {
 private extension OSlideQuestionView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -79,7 +79,7 @@ private extension OSlideQuestionView {
     
     func makeQuestionLabel() -> PaddingLabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -92,7 +92,7 @@ private extension OSlideQuestionView {
         view.bottomInset = 36.scale
         view.layer.cornerRadius = 20.scale
         view.layer.masksToBounds = true
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         view.attributedText = questionKey.localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

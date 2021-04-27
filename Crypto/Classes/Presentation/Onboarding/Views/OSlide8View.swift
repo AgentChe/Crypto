@@ -90,7 +90,7 @@ private extension OSlide8View {
 private extension OSlide8View {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -114,7 +114,7 @@ private extension OSlide8View {
     
     func makeValueLabel() -> UILabel {
         let view = UILabel()
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.font = Fonts.SFProRounded.bold(size: 27.scale)
         addSubview(view)
         return view

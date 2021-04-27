@@ -30,7 +30,7 @@ extension TestStatsAnswerCell {
     func setup(element: TestStatsAnswerElement) {
         let attr = TextAttributes()
             .font(Fonts.SFProRounded.regular(size: 17.scale))
-            .lineHeight(20).textColor(.black)
+            .lineHeight(20).textColor(.white)
         
         answerLabel.attributedText = element.question.attributed(with: attr)
         iconView.image = element.isCorrect

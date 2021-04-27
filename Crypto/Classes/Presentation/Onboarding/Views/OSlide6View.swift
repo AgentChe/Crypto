@@ -102,7 +102,7 @@ private extension OSlide6View {
 private extension OSlide6View {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -123,7 +123,7 @@ private extension OSlide6View {
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(tapGesture)
         view.isSelected = false
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         view.layer.cornerRadius = 20.scale
         view.label.text = title.localized
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SettingsView: UIView {
+final class SettingsView: GradientView {
     lazy var titleLabel = makeTitleLabel()
     lazy var tableView = makeTableView()
     
@@ -26,7 +26,12 @@ final class SettingsView: UIView {
 // MARK: Private
 private extension SettingsView {
     func initialize() {
-        backgroundColor = Appearance.backgroundColor
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
     }
 }
 
@@ -35,7 +40,7 @@ private extension SettingsView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 88.scale : 65.scale),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 88.scale : 45.scale),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale)
         ])
         
@@ -52,7 +57,7 @@ private extension SettingsView {
 private extension SettingsView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 34.scale))
             .lineHeight(41.scale)
             .letterSpacing(0.37.scale)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StatsView: UIView {
+final class StatsView: GradientView {
     lazy var tableView = makeTableView()
     lazy var titleLabel = makeTitleLabel()
     
@@ -25,7 +25,12 @@ final class StatsView: UIView {
 // MARK: Private
 private extension StatsView {
     func initialize() {
-        backgroundColor = Appearance.backgroundColor
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
     }
 }
 
@@ -51,7 +56,7 @@ private extension StatsView {
 private extension StatsView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 34.scale))
             .lineHeight(40.scale)
             .letterSpacing(0.37.scale)
@@ -65,7 +70,7 @@ private extension StatsView {
     
     func makeTableView() -> StatsTableView {
         let view = StatsTableView()
-        view.backgroundColor = Appearance.backgroundColor
+        view.backgroundColor = UIColor.clear
         view.showsVerticalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

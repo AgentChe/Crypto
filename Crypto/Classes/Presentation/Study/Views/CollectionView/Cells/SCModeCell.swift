@@ -30,7 +30,7 @@ extension SCModeCell {
         imageView.image = UIImage(named: mode.image)
         
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.semiBold(size: 20.scale))
             .lineHeight(23.scale)
             .textAlignment(.center)
@@ -80,7 +80,7 @@ private extension SCModeCell {
     func makeContainer() -> UIView {
         let view = UIView()
         view.layer.cornerRadius = 20.scale
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

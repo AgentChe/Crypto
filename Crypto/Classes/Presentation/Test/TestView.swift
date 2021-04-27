@@ -6,7 +6,7 @@
 //
 import UIKit
 
-final class TestView: UIView {
+final class TestView: GradientView {
     lazy var progressView = makeProgressView()
     lazy var closeButton = makeCloseButton()
     lazy var bottomButton = makeBottomButton()
@@ -48,7 +48,12 @@ extension TestView {
 // MARK: Private
 private extension TestView {
     func initialize() {
-        backgroundColor = Appearance.backgroundColor
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
     }
     
     static let buttonAttr = TextAttributes()
@@ -119,7 +124,7 @@ private extension TestView {
     
     func makeProgressView() -> UIProgressView {
         let view = UIProgressView()
-        let color = Appearance.mainColor
+        let color = UIColor.white
         view.trackTintColor = color.withAlphaComponent(0.3)
         view.progressTintColor = color
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -131,7 +136,7 @@ private extension TestView {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setImage(UIImage(named: "Question.Close"), for: .normal)
-        view.tintColor = .black
+        view.tintColor = .white
         addSubview(view)
         return view
     }
@@ -147,11 +152,8 @@ private extension TestView {
     
     func makeNextButton() -> UIButton {
         let view = UIButton()
-        let color = UIColor(integralRed: 30, green: 39, blue: 85)
-        
         view.setImage(UIImage(named: "Question.Next"), for: .normal)
-        view.tintColor = color
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         view.layer.cornerRadius = 20.scale
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
@@ -162,7 +164,7 @@ private extension TestView {
         let view = UIView()
         let gradientLayer = CAGradientLayer()
         
-        gradientLayer.colors = [UIColor.clear.cgColor, UIColor(integralRed: 241, green: 244, blue: 251).cgColor]
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor(integralRed: 35, green: 38, blue: 92).cgColor]
         gradientLayer.locations = [0, 0.65]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
@@ -170,7 +172,7 @@ private extension TestView {
         
         view.layer.mask = gradientLayer
         view.isUserInteractionEnabled = false
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PaygateMainView: UIView {
+final class PaygateMainView: GradientView {
     lazy var closeButton = makeCloseButton()
     lazy var restoreButton = makeRestoreButton()
     lazy var imageView = makeImageView()
@@ -59,7 +59,12 @@ final class PaygateMainView: UIView {
 // MARK: Private
 private extension PaygateMainView {
     func initialize() {
-        backgroundColor = Appearance.backgroundColor
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.colors = [
+            Appearance.backgroundColorTop.cgColor,
+            Appearance.backgroundColorBottom.cgColor
+        ]
     }
     
     @objc
@@ -192,7 +197,7 @@ private extension PaygateMainView {
     
     func makeRestoreButton() -> UIButton {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.regular(size: 13.scale))
             .letterSpacing(-0.6.scale)
         
@@ -215,7 +220,7 @@ private extension PaygateMainView {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 28.scale))
             .lineHeight(ScreenSize.isIphoneXFamily ? 41.scale : 30.scale)
             .textAlignment(.center)
@@ -259,7 +264,7 @@ private extension PaygateMainView {
     
     func makeSecuredLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.semiBold(size: 13.scale))
             .lineHeight(19.5.scale)
             .letterSpacing(-0.6.scale)
@@ -293,7 +298,7 @@ private extension PaygateMainView {
             .font(Fonts.SFProRounded.regular(size: 13.scale))
             .lineHeight(19.5.scale)
             .letterSpacing(-0.6.scale)
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .textAlignment(.center)
             .dictionary
         

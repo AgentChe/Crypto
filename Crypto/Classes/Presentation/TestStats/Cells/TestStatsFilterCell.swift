@@ -80,7 +80,7 @@ private extension TestStatsFilterCell {
             .font(Fonts.SFProRounded.regular(size: 25.scale))
             .lineHeight(30.scale)
             .textAlignment(.left)
-            .textColor(.black)
+            .textColor(.white)
         
         let view = UILabel()
         view.attributedText = "TestStats.Filter.Title".localized.attributed(with: attr)

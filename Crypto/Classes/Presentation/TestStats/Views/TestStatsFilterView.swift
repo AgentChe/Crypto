@@ -89,7 +89,7 @@ private extension TestStatsFilterView {
     func makeFilterButton(title: String) -> UIButton {
         let attr = TextAttributes()
             .font(Fonts.SFProRounded.regular(size: 17.scale))
-            .textColor(.black)
+            .textColor(.white)
             .lineHeight(20.scale)
         
         let view = UIButton()
@@ -104,7 +104,7 @@ private extension TestStatsFilterView {
     func makeSelectorView() -> UIView {
         let view = UIView()
         view.layer.cornerRadius = 1.scale
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -27,7 +27,7 @@ extension QuestionsProgressCell {
         let attr = TextAttributes()
             .font(Fonts.SFProRounded.regular(size: 17.scale))
             .lineHeight(20.scale)
-            .textColor(UIColor.black.withAlphaComponent(0.5))
+            .textColor(UIColor.white.withAlphaComponent(0.5))
             .textAlignment(.center)
         
         titleLabel.attributedText = title.attributed(with: attr)

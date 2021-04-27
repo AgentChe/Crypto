@@ -33,10 +33,8 @@ final class OSlide6Cell: UIView {
 // MARK: Private
 private extension OSlide6Cell {
     func initialize() {
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
         layer.cornerRadius = 20.scale
-        layer.borderWidth = 1.scale
-        layer.borderColor = UIColor.white.cgColor
     }
 }
 
@@ -70,9 +68,9 @@ private extension OSlide6Cell {
 private extension OSlide6Cell {
     func makeOutView() -> CircleView {
         let view = CircleView()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.clear
         view.layer.borderWidth = 2.scale
-        view.layer.borderColor = Appearance.mainColor.cgColor
+        view.layer.borderColor = UIColor.white.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -80,7 +78,7 @@ private extension OSlide6Cell {
     
     func makeInnerView() -> CircleView {
         let view = CircleView()
-        view.backgroundColor = Appearance.mainColor
+        view.backgroundColor = UIColor.white
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -88,7 +86,7 @@ private extension OSlide6Cell {
     
     func makeLabel() -> UILabel {
         let view = UILabel()
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.font = Fonts.SFProRounded.semiBold(size: 17.scale)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

@@ -22,6 +22,7 @@ final class OSlide2GenderView: UIView {
         
         makeConstraints()
         initialize()
+        updateColor()
     }
     
     required init?(coder: NSCoder) {
@@ -32,14 +33,14 @@ final class OSlide2GenderView: UIView {
 // MARK: Private
 private extension OSlide2GenderView {
     func initialize() {
-        backgroundColor = UIColor.white
+        backgroundColor = UIColor(integralRed: 48, green: 50, blue: 118)
         layer.cornerRadius = 20.scale
         layer.borderWidth = 1.scale
         layer.borderColor = UIColor.white.cgColor
     }
     
     func updateColor() {
-        layer.borderColor = isSelected ? UIColor.black.cgColor : UIColor.white.cgColor
+        layer.borderColor = isSelected ? UIColor.white.cgColor : UIColor(integralRed: 59, green: 63, blue: 138).cgColor
     }
 }
 
@@ -47,10 +48,10 @@ private extension OSlide2GenderView {
 private extension OSlide2GenderView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 24.scale),
+            imageView.widthAnchor.constraint(equalToConstant: 70.scale),
+            imageView.heightAnchor.constraint(equalToConstant: 70.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -73,7 +74,7 @@ private extension OSlide2GenderView {
     
     func makeLabel() -> UILabel {
         let view = UILabel()
-        view.textColor = UIColor.black
+        view.textColor = UIColor.white
         view.font = Fonts.SFProRounded.semiBold(size: 17.scale)
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
