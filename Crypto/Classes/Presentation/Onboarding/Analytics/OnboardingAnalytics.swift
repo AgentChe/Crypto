@@ -12,8 +12,6 @@ final class OnboardingAnalytics {
         switch step {
         case .slide1:
             name = "Welcome Screen"
-        case .slide2:
-            name = "Gender Screen"
         case .slide3:
             name = "Age Screen"
         case .slide4:
