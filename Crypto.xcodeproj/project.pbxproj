@@ -196,7 +196,6 @@
 		9613EEED2637EEDD00DAEB9A /* OSlide9TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613EE202637EEDD00DAEB9A /* OSlide9TagView.swift */; };
 		9613EEEE2637EEDD00DAEB9A /* OSlideQuestiionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613EE212637EEDD00DAEB9A /* OSlideQuestiionButton.swift */; };
 		9613EEEF2637EEDD00DAEB9A /* OSlide6Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613EE222637EEDD00DAEB9A /* OSlide6Cell.swift */; };
-		9613EEF12637EEDD00DAEB9A /* OSlide3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613EE242637EEDD00DAEB9A /* OSlide3View.swift */; };
 		9613EEF22637EEDD00DAEB9A /* OSlide14View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613EE252637EEDD00DAEB9A /* OSlide14View.swift */; };
 		9613EEF32637EEDD00DAEB9A /* OSlide4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613EE262637EEDD00DAEB9A /* OSlide4View.swift */; };
 		9613EEF42637EEDD00DAEB9A /* OSlide9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9613EE272637EEDD00DAEB9A /* OSlide9View.swift */; };
@@ -409,7 +408,6 @@
 		9613EE202637EEDD00DAEB9A /* OSlide9TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide9TagView.swift; sourceTree = "<group>"; };
 		9613EE212637EEDD00DAEB9A /* OSlideQuestiionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideQuestiionButton.swift; sourceTree = "<group>"; };
 		9613EE222637EEDD00DAEB9A /* OSlide6Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide6Cell.swift; sourceTree = "<group>"; };
-		9613EE242637EEDD00DAEB9A /* OSlide3View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide3View.swift; sourceTree = "<group>"; };
 		9613EE252637EEDD00DAEB9A /* OSlide14View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide14View.swift; sourceTree = "<group>"; };
 		9613EE262637EEDD00DAEB9A /* OSlide4View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide4View.swift; sourceTree = "<group>"; };
 		9613EE272637EEDD00DAEB9A /* OSlide9View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide9View.swift; sourceTree = "<group>"; };
@@ -1232,7 +1230,6 @@
 				9613EE172637EEDD00DAEB9A /* OSlide5View.swift */,
 				9613EE182637EEDD00DAEB9A /* OSlide8View.swift */,
 				9613EE192637EEDD00DAEB9A /* Atoms */,
-				9613EE242637EEDD00DAEB9A /* OSlide3View.swift */,
 				9613EE252637EEDD00DAEB9A /* OSlide14View.swift */,
 				9613EE262637EEDD00DAEB9A /* OSlide4View.swift */,
 				9613EE272637EEDD00DAEB9A /* OSlide9View.swift */,
@@ -1440,7 +1437,6 @@
 			files = (
 				9613EEB72637EEDD00DAEB9A /* AVPlayerView.swift in Sources */,
 				9613EEF32637EEDD00DAEB9A /* OSlide4View.swift in Sources */,
-				9613EEF12637EEDD00DAEB9A /* OSlide3View.swift in Sources */,
 				9613EEA92637EEDD00DAEB9A /* QuestionsCollectionView.swift in Sources */,
 				9613EED42637EEDD00DAEB9A /* CoursesCollectionView.swift in Sources */,
 				9613EE552637EEDD00DAEB9A /* PaygateOption.swift in Sources */,
@@ -1768,7 +1764,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2W4U9UWRKZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Crypto/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1776,7 +1772,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = exam.crypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Crypto Development Profile";
@@ -1794,7 +1790,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2W4U9UWRKZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Crypto/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1802,7 +1798,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = exam.crypto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Crypto AppStore Profile";
