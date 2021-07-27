@@ -9,10 +9,8 @@ import UIKit
 final class TestView: GradientView {
     lazy var progressView = makeProgressView()
     lazy var closeButton = makeCloseButton()
-    lazy var bottomButton = makeBottomButton()
-    lazy var nextButton = makeNextButton()
     lazy var tableView = makeTableView()
-    lazy var gradientView = makeGradientView()
+    lazy var bottomView = makeBottomView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,26 +20,6 @@ final class TestView: GradientView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-//MARK: Public
-extension TestView {
-    func setupBottomButton(for state: TestBottomButtonState) {
-        switch state {
-        case .confirm:
-            bottomButton.setAttributedTitle("Question.Continue".localized.attributed(with: Self.buttonAttr), for: .normal)
-        case .submit:
-            bottomButton.setAttributedTitle("Question.Submit".localized.attributed(with: Self.buttonAttr), for: .normal)
-        case .back:
-            bottomButton.setAttributedTitle("Question.BackToStudying".localized.attributed(with: Self.buttonAttr), for: .normal)
-        case .hidden:
-            break
-        }
-        
-        [bottomButton, gradientView].forEach {
-            $0.isHidden = state == .hidden
-        }
     }
 }
 
@@ -55,12 +33,6 @@ private extension TestView {
             Appearance.backgroundColorBottom.cgColor
         ]
     }
-    
-    static let buttonAttr = TextAttributes()
-        .font(Fonts.SFProRounded.regular(size: 20.scale))
-        .lineHeight(23.scale)
-        .textColor(.white)
-        .textAlignment(.center)
 }
 
 // MARK: Make constraints
@@ -86,27 +58,12 @@ private extension TestView {
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
         
-        NSLayoutConstraint.activate([
-            gradientView.heightAnchor.constraint(equalToConstant: 195.scale),
-            gradientView.leftAnchor.constraint(equalTo: leftAnchor),
-            gradientView.rightAnchor.constraint(equalTo: rightAnchor),
-            gradientView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
         
         NSLayoutConstraint.activate([
-            bottomButton.heightAnchor.constraint(equalToConstant: 60.scale),
-            bottomButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 26.scale),
-            bottomButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -26.scale),
-            bottomButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -70.scale)
+            bottomView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            bottomView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            bottomView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-        
-        NSLayoutConstraint.activate([
-            nextButton.heightAnchor.constraint(equalToConstant: 40.scale),
-            nextButton.widthAnchor.constraint(equalTo: nextButton.heightAnchor),
-            nextButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -16.scale),
-            nextButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -67.scale)
-        ])
-        
     }
 }
 
@@ -136,43 +93,13 @@ private extension TestView {
         let view = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.setImage(UIImage(named: "Question.Close"), for: .normal)
-        view.tintColor = .white
+        view.tintColor = .black
         addSubview(view)
         return view
     }
     
-    func makeBottomButton() -> UIButton {
-        let view = UIButton()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 30.scale
-        view.backgroundColor = Appearance.mainColor
-        addSubview(view)
-        return view
-    }
-    
-    func makeNextButton() -> UIButton {
-        let view = UIButton()
-        view.setImage(UIImage(named: "Question.Next"), for: .normal)
-        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
-        view.layer.cornerRadius = 20.scale
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        return view
-    }
-    
-    func makeGradientView() -> UIView {
-        let view = UIView()
-        let gradientLayer = CAGradientLayer()
-        
-        gradientLayer.colors = [UIColor.clear.cgColor, UIColor(integralRed: 35, green: 38, blue: 92).cgColor]
-        gradientLayer.locations = [0, 0.65]
-        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
-        gradientLayer.frame = CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width, height: 195.scale))
-        
-        view.layer.mask = gradientLayer
-        view.isUserInteractionEnabled = false
-        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
+    func makeBottomView() -> BottomView {
+        let view = BottomView()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TabView: UIView {
+final class TabView: GradientView {
     enum Tab {
         case study, stats
     }

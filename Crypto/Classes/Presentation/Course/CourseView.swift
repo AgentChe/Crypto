@@ -58,7 +58,12 @@ private extension CourseView {
     
     func makeTabView() -> TabView {
         let view = TabView()
-        view.backgroundColor = Appearance.backgroundColorBottom
+        view.gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        view.gradientLayer.colors = [
+            UIColor(integralRed: 59, green: 63, blue: 138).cgColor,
+            UIColor(integralRed: 48, green: 50, blue: 118).cgColor
+        ]
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

@@ -77,10 +77,15 @@ private extension SCModeCell {
 
 // MARK: Lazy initialization
 private extension SCModeCell {
-    func makeContainer() -> UIView {
-        let view = UIView()
+    func makeContainer() -> GradientView {
+        let view = GradientView()
         view.layer.cornerRadius = 20.scale
-        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
+        view.gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        view.gradientLayer.colors = [
+            UIColor(integralRed: 59, green: 63, blue: 138).cgColor,
+            UIColor(integralRed: 48, green: 50, blue: 118).cgColor
+        ]
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

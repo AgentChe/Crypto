@@ -65,7 +65,7 @@ private extension SCBriefDayView {
     func makeWeekdayLabel() -> UILabel {
         let view = UILabel()
         view.font = Fonts.SFProRounded.semiBold(size: 13.scale)
-        view.textColor = UIColor.white.withAlphaComponent(0.3)
+        view.textColor = UIColor.white
         view.textAlignment = .center
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

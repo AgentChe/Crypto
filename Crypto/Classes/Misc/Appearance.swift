@@ -14,7 +14,7 @@ struct Appearance {
     static let mainColor = UIColor(integralRed: 115, green: 112, blue: 217)
     static let mainColorAlpha = UIColor(integralRed: 115, green: 112, blue: 217, alpha: 0.3)
     
-    static let takeFreeTestColor = UIColor(integralRed: 239, green: 121, blue: 55)
+    static let takeFreeTestColor = UIColor(integralRed: 212, green: 119, blue: 141)
     
     static let progress1Color = UIColor(integralRed: 115, green: 112, blue: 217)
     static let progress2Color = UIColor(integralRed: 236, green: 196, blue: 132)

@@ -36,9 +36,9 @@ extension CourseProgressCell {
             .textAlignment(.left)
         
         titleLabel.attributedText = model.name.attributed(with: attr)
-        testTakenProgress.setup(percent: model.testsTaken, color: Appearance.progress1Color)
-        correctAnswersProgress.setup(percent: model.correctAnswers, color: Appearance.progress2Color)
-        questionsTakenProgress.setup(percent: model.questionsTaken, color: Appearance.progress3Color)
+        testTakenProgress.setup(percent: model.testsTaken, color: UIColor(integralRed: 102, green: 71, blue: 226))
+        correctAnswersProgress.setup(percent: model.correctAnswers, color: UIColor(integralRed: 212, green: 119, blue: 141))
+        questionsTakenProgress.setup(percent: model.questionsTaken, color: UIColor(integralRed: 81, green: 170, blue: 153))
     }
 }
 
@@ -101,7 +101,7 @@ private extension CourseProgressCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 20.scale
-        view.backgroundColor = UIColor(integralRed: 59, green: 63, blue: 138)
+        view.backgroundColor = UIColor(integralRed: 48, green: 50, blue: 118)
         contentView.addSubview(view)
         return view
     }

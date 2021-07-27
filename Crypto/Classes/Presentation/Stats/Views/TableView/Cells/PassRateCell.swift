@@ -91,11 +91,16 @@ private extension PassRateCell {
         return view
     }
     
-    func makeContainerView() -> UIView {
-        let view = UIView()
+    func makeContainerView() -> GradientView {
+        let view = GradientView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 20.scale
-        view.backgroundColor = Appearance.mainColor
+        view.gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        view.gradientLayer.colors = [
+            UIColor(integralRed: 115, green: 112, blue: 217).cgColor,
+            UIColor(integralRed: 102, green: 71, blue: 226).cgColor
+        ]
         contentView.addSubview(view)
         return view
     }

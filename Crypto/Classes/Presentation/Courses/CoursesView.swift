@@ -68,6 +68,7 @@ private extension CoursesView {
             .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 34.scale))
             .lineHeight(40.scale)
+            .textAlignment(.center)
         
         let view = UILabel()
         view.numberOfLines = 0

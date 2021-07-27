@@ -37,14 +37,12 @@ extension QuestionCell {
         guard !htmlString.isEmpty else { return nil }
         
         let font = Fonts.SFProRounded.regular(size: 25.scale)
-        let htmlWithStyle = "<span style=\"font-family: \(font.fontName); font-style: regular; font-size: \(font.pointSize); color: white; line-height: 30px;\">\(htmlString)</span>"
+        let htmlWithStyle = "<span style=\"font-family: \(font.fontName); color: white; font-style: regular; font-size: \(font.pointSize); line-height: 30px;\">\(htmlString)</span>"
         let data = Data(htmlWithStyle.utf8)
         
         let attributedString = try? NSAttributedString(
             data: data,
-            options: [
-                .documentType: NSAttributedString.DocumentType.html,
-                .characterEncoding: String.Encoding.utf8.rawValue],
+            options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue],
             documentAttributes: nil
         )
         
@@ -76,7 +74,6 @@ private extension QuestionCell {
 private extension QuestionCell {
     func makeQuestionLabel() -> UILabel {
         let view = UILabel()
-        view.textColor = UIColor.white
         view.numberOfLines = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
