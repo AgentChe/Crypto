@@ -30,6 +30,10 @@ class BottomView: UIView {
         
         gradientLayer.frame = bounds
     }
+    
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        bottomButton.frame.contains(point)
+    }
 }
 
 // MARK: Public
@@ -114,16 +118,14 @@ private extension BottomView {
     func makeGradientView() -> UIView {
         let view = UIView()
         
-        gradientLayer.colors = [
-            UIColor.clear.cgColor,
-            UIColor(integralRed: 35, green: 38, blue: 92).cgColor]
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor(integralRed: 241, green: 244, blue: 251).cgColor]
         gradientLayer.locations = [0, 0.65]
         gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
         
         view.layer.mask = gradientLayer
         view.isUserInteractionEnabled = false
-        view.backgroundColor = UIColor(integralRed: 48, green: 50, blue: 118)
+        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
